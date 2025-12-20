@@ -1,0 +1,16 @@
+{
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "framework": null,
+  "headers": [
+    {
+      "source": "/market_journal.csv",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/csv"
+        }
+      ]
+    }
+  ]
+}

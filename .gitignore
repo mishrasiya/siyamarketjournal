@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.pyc
+
+# API Keys
+config.py
+
+# Excel temporary files
+~$*.xlsx
+~$*.xls
+
+# Output Excel files (but keep CSV for web)
+Updated_*.xlsx
+Updated1_*.xlsx
+Nov_*.xlsx
+Market Journal Fall 2025.xlsx
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Vercel
+.vercel/
