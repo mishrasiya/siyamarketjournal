@@ -10,120 +10,118 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a1f44; /* Dark navy background */
+            color: #f0f0f0;
             min-height: 100vh;
             padding: 40px 20px;
         }
-        
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            background: black;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            background: #142b5c; /* Slightly lighter navy */
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
             overflow: hidden;
         }
-        
+
         .header {
-            background: black;
-            color: white;
+            background: #0f2550;
+            color: #f0f0f0;
             padding: 40px;
             text-align: center;
         }
-        
+
         .header h1 {
             font-size: 2.5rem;
-            margin-bottom: 15px;
             font-weight: 700;
-            color: white;
+            margin-bottom: 10px;
+            color: #ffd966; /* soft accent color */
         }
-        
+
         .header p {
             font-size: 1.1rem;
-            opacity: 0.95;
-            line-height: 1.6;
+            opacity: 0.9;
             max-width: 700px;
             margin: 0 auto;
-            color: white;
+            color: #e0e0e0;
         }
-        
+
         .content {
-            padding: 40px;
+            padding: 30px 40px;
         }
-        
+
         .table-container {
             overflow-x: auto;
-            border-radius: 8px;
-            border: 1px solid #666;
+            border-radius: 12px;
+            border: 1px solid #2e4a86;
+            background: #1c356f;
         }
-        
+
         table {
             width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9rem;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 0.95rem;
         }
-        
-        thead {
-            background: black;
+
+        thead tr {
+            background: #0f2550;
+        }
+
+        th, td {
+            padding: 14px 12px;
+            text-align: left;
+        }
+
+        th {
+            font-weight: 600;
+            color: #ffd966;
+            border-bottom: 2px solid #2e4a86;
             position: sticky;
             top: 0;
-            z-index: 10;
         }
-        
-        th {
-            padding: 15px 12px;
-            text-align: left;
-            font-weight: 600;
-            color: white;
-            border-bottom: 2px solid #666;
-            white-space: nowrap;
-        }
-        
+
         td {
-            padding: 12px;
-            border-bottom: 1px solid #666;
-            color: white;
+            color: #f0f0f0;
+            border-bottom: 1px solid #2e4a86;
         }
-        
+
         tbody tr:hover {
-            background: #1a1a1a;
+            background: #2e4a86;
+            transition: background 0.2s ease-in-out;
         }
-        
-        tbody tr:last-child td {
-            border-bottom: none;
-        }
-        
+
         .date-col {
             font-weight: 500;
-            color: white;
+            color: #ffd966;
         }
-        
+
         .number-col {
             text-align: right;
             font-variant-numeric: tabular-nums;
-            color: white;
         }
-        
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2rem;
             }
-            
+
             .header p {
                 font-size: 1rem;
             }
-            
+
             .content {
                 padding: 20px;
             }
-            
+
             table {
-                font-size: 0.8rem;
+                font-size: 0.85rem;
             }
-            
+
             th, td {
                 padding: 8px 6px;
             }
@@ -134,7 +132,7 @@
     <div class="container">
         <div class="header">
             <h1>Market Journal</h1>
-            <p>Created by Siya Mishra</p>
+            <p>Personal market journal to stay up to date with the market. Created by Siya Mishra</p>
         </div>
         <div class="content">
             <div class="table-container">
@@ -152,14 +150,13 @@
             .then(response => response.text())
             .then(csv => {
                 const lines = csv.split('\n').filter(line => line.trim());
-                if (lines.length === 0) return;
-                
-                // Parse CSV (handling quoted fields)
-                const parseCSVLine = (line) => {
+                if (!lines.length) return;
+
+                const parseCSVLine = line => {
                     const result = [];
                     let current = '';
                     let inQuotes = false;
-                    
+
                     for (let i = 0; i < line.length; i++) {
                         const char = line[i];
                         if (char === '"') {
@@ -174,50 +171,43 @@
                     result.push(current.trim());
                     return result;
                 };
-                
+
                 const headers = parseCSVLine(lines[0]);
                 const thead = document.getElementById('tableHead');
                 const tbody = document.getElementById('tableBody');
-                
-                // Create header row
+
                 const headerRow = document.createElement('tr');
                 headers.forEach(header => {
                     const th = document.createElement('th');
                     th.textContent = header;
-                    if (header.toUpperCase().includes('DATE')) {
-                        th.classList.add('date-col');
-                    }
+                    if (header.toUpperCase().includes('DATE')) th.classList.add('date-col');
                     headerRow.appendChild(th);
                 });
                 thead.appendChild(headerRow);
-                
-                // Create data rows
+
                 for (let i = 1; i < lines.length; i++) {
                     const row = document.createElement('tr');
                     const values = parseCSVLine(lines[i]);
-                    
+
                     headers.forEach((header, index) => {
                         const td = document.createElement('td');
                         const value = values[index] || '';
                         td.textContent = value;
-                        
-                        if (header.toUpperCase().includes('DATE')) {
-                            td.classList.add('date-col');
-                        } else if (!isNaN(value) && value !== '') {
-                            td.classList.add('number-col');
-                        }
-                        
+
+                        if (header.toUpperCase().includes('DATE')) td.classList.add('date-col');
+                        else if (!isNaN(value) && value !== '') td.classList.add('number-col');
+
                         row.appendChild(td);
                     });
+
                     tbody.appendChild(row);
                 }
             })
             .catch(error => {
                 console.error('Error loading CSV:', error);
-                document.getElementById('tableBody').innerHTML = 
-                    '<tr><td colspan="100%" style="text-align: center; padding: 40px; color: #dc3545;">Error loading data. Please check if market_journal.csv exists.</td></tr>';
+                document.getElementById('tableBody').innerHTML =
+                    '<tr><td colspan="100%" style="text-align:center; padding:40px; color:#ff6b6b;">Error loading data. Please check if market_journal.csv exists.</td></tr>';
             });
     </script>
 </body>
 </html>
-
