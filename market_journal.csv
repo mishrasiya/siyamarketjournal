@@ -1,75 +1,170 @@
 DATE,EURO/USD,STG/USD,USD/YEN,NIKKEI,DAX ,FTSE,DOW,S&P,JAPAN 10 YR (%),GERMAN 10 YR (%),UK 10 YR (%),US 10 YR (%),GOLD,BRENT CRUDE ,BITCOIN ,Short DAILY NEWS ITEM(S) that affected one or more of today's prices
-2025-12-18,,,,,,,,,,,,,,,,
-2025-12-17,,,,,,,,,,,,,,,,
-2025-12-16,,,,,,,,,,,,,,,,
-2025-12-15,,,,,,,,,,,,,,,,
-2025-12-12,,,,,,,,,,,,,,,,
-2025-12-11,,,,,,,,,,,,,,,,
-2025-12-10,,,,,,,,,,,,,,,,
-2025-12-09,,,,,,,,,,,,,,,,
-2025-12-08,,,,,,,,,,,,,,,,
-2025-12-05,,,,,,,,,,,,,,,,
-2025-12-04,,,,,,,,,,,,,,,,
-2025-12-03,,,,,,,,,,,,,,,,
-2025-12-02,,,,,,,,,,,,,,,,
-2025-12-01,,,,,,,,,,,,,,,,
-2025-11-28,,,,,,,,,,,,,,,,
-2025-11-26,,,,,,,,,,,,,,,,
-2025-11-25,,,,,,,,,,,,,,,,
-2025-11-24,,,,,,,,,,,,,,,,
-2025-11-21,1.1535,1.3085,157.37,48625.88,23091.87,9539.7,46245.41,6602.99,1.788,2.707,4.551,4.063,4076.7,62.56,85090.69,"The S&P 500, closing at 6602.99, reflected investor attention on ""High Growth Tech Stocks"" and speculative plays, including a new ""Nvidia of Quantum Computing."" Yet, as analysts pondered ""What on Earth just happened to the stock market?"", warnings emerged from Marc Chandler that the US market remained ""frothy"" despite a significant ""Nvidia boost,"" indicating underlying valuation concerns even amidst targeted growth stock interest."
-2025-11-20,1.1541,1.3062,156.99,49823.94,23278.85,9527.7,45752.26,6538.76,1.82,2.725,4.589,4.106,4056.5,63.38,86631.9,"US equities plunged after erasing substantial morning gains on November 20th, with the Dow Jones closing at 45752.26 and the S&P 500 at 6538.76, following ""big swings"" on Wall Street. This sharp reversal was largely triggered by Ray Dalio's warning of a ""big bubble"" in the market, causing bellwether Nvidia to turn negative and fueling broad selling."
-2025-11-19,1.1581,1.3148,155.55,48537.7,23162.92,9507.4,46138.77,6642.16,1.772,2.717,4.599,4.133,4077.7,63.51,91465.99,"Following Nvidia's robust Q3 earnings beat, which saw CEO Jensen Huang report ""off the charts"" demand for Blackwell chips, major U.S. indices surged. The S&P 500 climbed to 6642.16 and the Dow reached 46138.77, largely driven by this positive tech sentiment despite underlying strategist concerns regarding massive AI company borrowing."
-2025-11-18,1.1591,1.3156,155.27,48702.98,23180.53,9552.3,46091.74,6617.32,1.749,2.707,4.556,4.123,4061.3,64.89,92948.88,"U.S. equity futures, including the Dow, S&P 500, and Nasdaq, slumped as ""AI worries sap markets"" ahead of Nvidia earnings and crucial jobs data. Adding to investor caution, ""sharp disagreements over economy threaten Federal Reserve interest rate cut,"" clouding monetary policy prospects."
-2025-11-17,1.1615,1.316,154.59,50323.91,23590.52,9675.4,46590.24,6672.41,1.733,2.716,4.537,4.133,4068.3,64.2,92093.88,"Anticipation of Nvidia's earnings and an upcoming jobs report saw U.S. market futures, including the S&P 500, climb today. This upward momentum, however, was notably tempered by AI bubble jitters, spurred by news of Peter Thiel reportedly dumping Nvidia stock and Goldman Sachs warning the market has already priced in the AI boom."
-2025-11-14,1.1632,1.3152,154.63,50376.53,23876.55,9698.4,47147.48,6734.11,1.702,2.723,4.583,4.148,4087.6,64.39,94397.79,"Following Chancellor Reeves' tax U-turn, the FTSE 100 slid and UK gilts sold off, injecting political uncertainty into European markets. Simultaneously, significant turbulence gripped crypto assets, with headlines like 'Dogecoin Treasury Bet Backfires' and 'Retail Traders Left Exposed' highlighting risks as Bitcoin prices fell amidst a general sense that 'Humans Can’t Wrap Their Minds Around This Economy.'"
-2025-11-13,1.1592,1.3128,154.71,51281.83,24041.62,9807.7,47457.22,6737.49,1.692,2.692,4.441,4.112,4186.9,63.01,99697.49,"Major U.S. stock indices suffered significant losses today, with the Dow tumbling 800 points and the Nasdaq and S&P 500 also ""hammered"" as investors pared back their bets on aggressive Fed rate cuts. This broad market sell-off overshadowed commentary from analysts like Guggenheim's CIO, who still anticipate a December rate cut, highlighting prevailing skepticism about monetary policy easing."
-2025-11-12,1.1587,1.3153,154.07,51063.31,24381.46,9911.4,48254.82,6850.92,1.691,2.647,4.403,4.065,4204.4,62.71,101663.19,"Amidst escalating geopolitical concerns over Iran's uranium stock and Moody's Mark Zandi's stark warning on US economic vulnerabilities, gold prices surged to $4204.40/oz. This caution also tempered gains across global equities, with the S&P 500 trading at 6850.92, despite positive signals that a government shutdown could be nearing its end."
-2025-11-11,1.1557,1.3173,154.15,50842.93,24088.06,9899.6,47927.96,6846.61,1.696,2.663,4.391,4.12,4106.8,65.16,102997.47,"Goldman Sachs CEO David Solomon's stark warning regarding the nation's $38 trillion debt instilled market caution, evidenced by gold's ascent above $4100/oz and a strong dollar against the yen (USD/JPY: 154.15). Meanwhile, the AI sector continued to see significant, albeit complex, institutional activity, with Cathie Wood buying a declining stock and SoftBank reallocating its AI holdings."
-2025-11-10,1.1544,1.3143,153.82,50911.76,23959.99,9787.2,47368.63,6832.43,1.702,2.669,4.468,4.11,4111.8,64.06,105996.59,"US stock futures, including the Dow and S&P 500, surged today as a hopeful vote signaled a potential end to the government shutdown, lifting market sentiment. This optimism reverberated globally, with the FTSE 100 rebounding sharply and other European and Asian indices following suit as investors cheered the prospective resolution."
-2025-11-07,1.1549,1.3141,152.95,50276.37,23569.96,9682.6,46987.1,6728.8,1.679,2.672,4.47,4.093,3999.4,63.63,103372.41,"The S&P 500, alongside the Dow and Nasdaq, concluded a tumultuous week lower as a ""worst tech sell-off since April"" dominated headlines. With ""$1 Trillion in Tech Stocks Sold Off"" amid growing AI skepticism, investors navigated significant volatility, pushing major indices down for the week despite a late-day rebound from lows."
-2025-11-06,1.1497,1.3053,154.07,50883.68,23734.02,9735.8,46912.3,6720.32,1.683,2.654,4.438,4.093,3979.9,63.38,101301.29,"Strong investor confidence, largely driven by the semiconductor sector, lifted global equities today. Following news of Micron Technology's stock reaching a record high after HBM4 prices surged 50%, the S&P 500, Dow, and Nikkei 225 all posted significant advances, highlighting continued enthusiasm for technology-led growth."
-2025-11-05,1.1486,1.3022,153.56,50212.27,24049.74,9777.1,47311.0,6796.29,1.667,2.677,4.465,4.157,3980.3,63.52,103891.84,"Following reports of high-flying AI stocks tumbling, notably Palantir's post-earnings selloff, and concerns about the AI data center boom warping the US economy, market sentiment shifted. This triggered volatility across equities like the S&P 500 and propelled safe-haven demand, driving gold prices to nearly $3,980/oz amidst lingering ""cockroach"" bankruptcies."
-2025-11-04,1.1519,1.3135,154.2,51497.2,23949.11,9715.0,47085.24,6771.55,1.676,2.656,4.429,4.089,3947.7,64.44,101590.52,"US stock futures, including the Dow and S&P 500, sank amidst a broad tech sell-off driven by ""AI valuation fears"" and sharp drops in stocks like Palantir following earnings. Adding to market jitters, Bitcoin's notable decline below $100,000, signaling a 20% drop from October highs, further weighed on investor sentiment."
-2025-11-03,1.1528,1.3135,154.2,52411.34,24132.41,9701.4,47336.68,6851.97,1.659,2.669,4.442,4.106,4000.3,64.89,106547.52,"Worries about ""frothy valuations"" and Morgan Stanley's ""shock take"" on the stock market sent Dow, S&P 500, and Nasdaq futures sinking on Monday, fueled by ""AI bubble"" concerns. Conversely, Amazon stock jumped 5% premarket following OpenAI's substantial $38 billion AWS partnership, providing a notable bright spot amidst broader market anxieties."
-2025-10-31,1.1572,1.3159,153.9,52411.34,23958.3,9717.3,47562.87,6840.2,1.659,2.634,4.408,4.101,3982.2,65.07,109556.16,"Heavyweight tech earnings pressured markets today, with Apple stock closing slightly down post-Q4 report and Meta's costly AI gamble highlighting sector challenges. The S&P 500 consequently faced headwinds, while broader ""boom or bubble"" concerns echoed through investor sentiment."
-2025-10-30,1.1603,1.3195,152.72,51325.61,24118.89,9760.1,47522.12,6822.34,1.647,2.648,4.432,4.093,4001.3,65.0,108305.55,"Major equity indices saw mixed movements as Big Tech earnings dominated headlines today. The S&P 500 and Dow benefited from Amazon's stock surge and Apple's upbeat holiday forecast, while Meta's tumble, linked to AI investment uncertainty, and Microsoft's slide, moderated overall gains."
-2025-10-29,1.1658,1.3279,151.73,51307.65,24124.21,9756.1,47632.0,6890.59,1.654,2.625,4.394,4.058,3983.7,64.92,110055.3,"Global equities climbed on Wednesday, propelled by a surge in tech sector confidence. News of Nvidia's historic $5 trillion market capitalization, coupled with robust Q4 earnings expectations for Apple and Microsoft's strategic investments, fueled significant gains across the S&P 500 and European indices like the DAX."
-2025-10-28,1.1652,1.3341,152.69,50219.18,24278.63,9696.7,47706.37,6890.89,1.639,2.627,4.405,3.983,3966.2,64.4,112956.16,"Global equities exhibited robust gains today, with the DOW reaching 47706.37, as investors largely shrugged off a ""chaotic mix of catalysts"" to focus on future Fed rate cuts. This dovish outlook, highlighted in gold market analysis, spurred a rotation from the precious metal, which saw a selloff to $3966.20/oz, into riskier assets like stocks."
-2025-10-27,1.1632,1.3322,153.06,50512.32,24308.78,9653.8,47544.59,6875.16,1.674,2.619,4.405,3.997,4001.9,65.62,114119.33,"Global equity markets, including the S&P 500 and European indices, positioned cautiously on October 27th ahead of crucial ""Big Tech earnings"". This heightened focus on technology was underscored by individual AI plays like SoundHound AI (SOUN) drawing considerable investor attention, shaping market sentiment for the day."
-2025-10-24,1.1618,1.3327,152.6,49299.65,24239.89,9645.6,47207.12,6791.69,1.659,2.628,4.435,3.997,4118.4,65.94,111033.92,"European indices like the DAX and FTSE 100 joined a broad global market rally today, with investors seemingly undeterred by dire pronouncements. Headlines about Counter-Strike's multi-billion dollar economy in freefall and Mark Cuban's stark warnings of market destruction failed to dampen sentiment, as anticipation built for Q3 earnings, including Alphabet's (GOOGL) report."
-2025-10-23,1.1608,1.3352,151.95,48641.61,24207.79,9578.6,46734.61,6738.44,1.661,2.588,4.435,3.991,4125.5,65.99,110069.73,"Buoyed by positive earnings reports from major players like American Airlines, Honeywell, and Dow, global equities, including the S&P 500 and DOW, saw robust activity. Meanwhile, Cathie Wood's renewed backing of a 'Tesla killer' underscored continued investor confidence in disruptive automotive technology."
-2025-10-22,1.16,1.3365,151.89,49307.79,24151.13,9515.0,46590.41,6699.4,1.655,2.568,4.415,3.953,4044.4,62.59,107688.59,"U.S. equities retreated on October 22nd, with the S&P 500, Dow, and Nasdaq all falling. This decline was primarily driven by a late-afternoon sell-off in the tech sector, notably Netflix's slump and anticipation surrounding Tesla's upcoming earnings."
-2025-10-21,1.1644,1.3405,150.77,49316.06,24330.03,9427.0,46924.74,6735.35,1.663,2.559,4.488,3.963,4087.7,61.32,108476.89,"Wall Street cheered the start of earnings season today, propelling the Dow Jones to a record high with a 200-point jump. This optimism was further fueled by accelerating AI data center growth, exemplified by significant investments in companies like Vertiv, and a notable surge in rare earth stocks."
-2025-10-20,1.1657,1.3426,150.9,49185.5,24258.8,9403.6,46706.58,6735.13,1.669,2.58,4.514,3.986,4336.4,61.01,110588.93,"Following reports that Dow, S&P 500, and Nasdaq futures stalled as investors eyed an earnings deluge, U.S. markets exhibited caution on October 20th. While individual tech giants like Apple and Google showed bullish momentum, overall futures remained largely unchanged, signaling a wait-and-see approach ahead of corporate disclosures."
-2025-10-17,1.17,1.3446,150.12,47582.15,23830.99,9354.6,46190.61,6664.01,1.631,2.584,4.537,4.007,4189.9,61.29,106467.79,"The S&P 500 surged to 6664.01 on October 17th, as reports confirming ""Bank Worries and Trade Tensions Recede"" sparked a broad-based rally in equities. This positive shift in sentiment saw stocks settle higher across the board, with Apple notably outpacing the general market."
-2025-10-16,1.1646,1.3404,150.97,48277.74,24272.19,9436.1,45952.24,6629.07,1.657,2.575,4.502,3.976,4280.2,61.06,108186.04,"US equities experienced a significant downturn today, with the Dow plummeting 300 points and the S&P 500 also sliding, primarily due to intensifying regional bank woes. Despite strong Q3 earnings from TSMC, CSX, and Interactive Brokers, these positive results were largely overshadowed by broader market anxieties."
-2025-10-15,1.1602,1.3322,151.73,47672.67,24181.37,9424.8,46253.31,6671.06,1.656,2.575,4.551,4.046,4176.9,61.91,110783.16,"Despite choppy trade and ongoing ""China tensions"" that saw the Dow whipsaw, strong tech sector performance, led by ""TSMC's stellar earnings,"" propelled the S&P 500 and Nasdaq higher. Individual tech stocks, including Advanced Micro, demonstrated significant late-afternoon strength, largely eclipsing broader ""trade-war jitters"" and guiding overall market direction."
-2025-10-14,1.1567,1.3333,152.43,46847.32,24236.94,9452.8,46270.46,6644.31,1.663,2.611,4.589,4.022,4138.7,62.39,113118.66,"Wall Street experienced a volatile session, with the Dow Jones Industrial Average rising on strong bank earnings and persistent rate-cut hopes, while the Nasdaq Composite notably slid. This divergence, influenced by renewed U.S.-China trade tensions and Fed Chair Powell's comments, saw Intel stock drop amidst worries of its recent rapid ascent."
-2025-10-13,1.1602,1.3336,152.06,48088.8,24387.93,9442.9,46067.58,6654.72,1.696,2.637,4.66,4.051,4108.6,63.32,115271.08,"Driven by rekindled trade hopes following Trump's tariff commentary and strong AI optimism, the Dow surged to 46067.58 and the S&P 500 advanced significantly. While persistent US-China tensions pressured the Nasdaq, rallies in key tech components like Nvidia and Broadcom ultimately underscored a broadly positive market sentiment."
-2025-10-10,1.1566,1.3305,152.96,48088.8,24241.46,9427.5,45479.6,6552.51,1.696,2.646,4.674,4.051,3975.9,62.73,113214.37,"Following persistent reports of ""Stocks Fall Sharply on China Trade Tensions,"" global equities experienced significant declines on October 10th. This escalating geopolitical friction prompted a flight to safety, with gold prices rising sharply amidst broad market unease impacting major indices like the DOW and S&P 500."
-2025-10-09,1.1632,1.3401,152.68,48580.44,24611.25,9509.4,46358.42,6735.11,1.697,2.702,4.749,4.148,3946.3,65.22,121705.59,"Amid news of significant tech sector headwinds, the Dow slid and the S&P 500 retreated from its record-high rally today. Apple's (AAPL) decline, exceeding the broader market, alongside QUALCOMM's (QCOM) new antitrust lawsuit in the UK, put considerable pressure on major indices."
-2025-10-08,1.1655,1.3421,152.05,47734.99,24597.13,9548.9,46601.78,6753.72,1.704,2.682,4.721,4.129,4043.3,66.25,123354.87,"Global equities extended their upward trajectory on Wednesday, with the Dow and S&P 500 powering higher amidst sustained ""AI Optimism"" across markets. This sentiment, reinforced by Goldman Sachs dismissing ""AI Bubble"" concerns, notably drove late-afternoon gains in tech stocks following their ""record-setting rally."""
-2025-10-07,1.171,1.3485,150.33,47950.88,24385.78,9483.6,46602.98,6714.59,1.681,2.712,4.726,4.127,3976.6,65.45,121451.38,"Despite an Apple (AAPL) downgrade fueling valuation scrutiny and doubts over iPhone growth, markets displayed resilience today. Significant investment in AI-linked high-grade debt and positive news for Tesla's EV sales outlook helped offset tech sector pressure, allowing major indices to maintain strong levels."
-2025-10-06,1.1712,1.3434,149.61,47944.76,24378.29,9479.1,46694.97,6740.28,1.68,2.723,4.741,4.162,3948.5,65.47,124752.53,"Global equity markets like the S&P 500 and DAX surged, supported by strong investor trading activity and optimism around tech, despite ""AI bubble"" chatter. Bitcoin, soaring past $124,000, was bolstered by bullish analyst forecasts for new highs and MicroStrategy's stock gains, largely shrugging off institutional selling of Goldman Sachs shares."
-2025-10-03,1.1725,1.3447,147.15,45769.5,24378.8,9491.3,46758.28,6715.79,1.665,2.702,4.695,4.119,3880.8,64.53,122266.53,"Broader market indexes posted gains, extending their weekly uptrend on October 3rd, even as key tech players faced specific challenges. AMD shares retreated following reports denying it would fab at Intel, while Apple also saw pressure after Jefferies downgraded the stock over foldable iPhone risks, impacting the tech sector despite overall market advances."
-2025-10-02,1.1734,1.348,147.08,44936.73,24422.56,9427.7,46519.72,6715.35,1.666,2.704,4.714,4.088,3839.7,64.11,120681.26,"The S&P 500 surged to 6715.35, as rallying chip makers and AI infrastructure stocks propelled tech shares higher throughout the afternoon. Despite a headline detailing how AI-generated 'workslop' is costing companies millions, market participants focused on the sector's growth potential, driving broad equity gains."
-2025-10-01,1.1736,1.3443,148.0,44550.85,24113.62,9446.4,46441.1,6711.2,1.653,2.718,4.695,4.106,3867.5,65.35,118648.93,"Despite the US government shutdown commencing, Wall Street rallied impressively today. The Dow, S&P 500, and Nasdaq all climbed, with records notched by the former two, as investors heavily amplified rate cut bets following an ""ADP surprise"" mentioned in headlines, overriding fiscal concerns."
-2025-09-30,1.1731,1.3437,148.6,44932.63,23880.72,9350.4,46397.89,6688.46,1.651,2.716,4.7,4.148,3840.8,67.02,114056.09,"Propelled by robust tech sector activity, including Intel's reported investment discussions with TSMC and QCraft's global expansion, the Dow surged to a record high while the S&P 500 and Nasdaq celebrated their strongest Q3 since 2020. This broad market optimism, even as Wall Street braced for a potential shutdown, was further underpinned by the SEC's groundbreaking plan to facilitate blockchain-based stock trading, which also likely buoyed Bitcoin above $114,000."
-2025-09-29,1.1708,1.3408,149.4,45043.75,23745.06,9299.8,46316.07,6661.21,1.647,2.712,4.705,4.141,3820.9,67.97,114400.38,"Following fading hopes for a last-gasp government shutdown reprieve, US equities faltered on September 29th, with Dow and S&P 500 futures stalling. This broader market caution, which saw the Dow close at 46316.07 and the S&P 500 at 6661.21, largely overshadowed specific tech stock news regarding Apple's decelerating momentum and Intel's investment reports."
-2025-09-26,1.1663,1.3337,149.86,45354.99,23739.47,9284.8,46247.29,6643.7,1.659,2.754,4.757,4.187,3775.3,70.13,109712.83,"The S&P 500 and other global equity markets, reflecting strong investor confidence, sustained high levels on September 26, partly driven by optimistic forecasts for a new AI semiconductor stock to reach $2 trillion. Meanwhile, Bitcoin continued its remarkable climb, even as Apple stock faced headwinds from a neutral UBS rating on iPhone 17 availability data and an ongoing Siri lawsuit, presenting a nuanced picture for tech investors."
-2025-09-25,1.1745,1.3452,148.75,45754.93,23534.83,9214.0,45947.32,6604.72,1.647,2.775,4.759,4.172,3736.9,69.42,109049.29,"Despite Dow and S&P 500 futures initially rising on PCE inflation data meeting expectations, broader market sentiment saw stocks fall for a third consecutive day. The overall market dipped, extending losses despite positive economic indicators, though Apple (AAPL) notably gained."
-2025-09-24,1.1814,1.3524,147.61,45630.31,23666.81,9250.4,46121.28,6637.97,1.641,2.753,4.676,4.147,3732.1,69.31,113328.63,"The S&P 500 and Dow extended their fall today, reflecting investor caution as headlines reported a sharp GDP expansion and dipping jobless claims. This ""good news is bad news"" dynamic, signaling potential for sustained hawkish monetary policy, fueled market declines after recent losses."
-2025-09-23,1.1801,1.3515,147.73,45493.66,23611.33,9223.3,46292.78,6656.92,1.659,2.755,4.683,4.12,3780.6,67.63,112014.5,"Following Fed Chair Powell's recent remarks, Wall Street indexes, including the DOW and S&P 500, closed lower as investors digested his comments. This broader market downturn was exacerbated by significant weakness in Big Tech, despite Apple's stock seeing a positive turn after its iPhone 17 launch."
-2025-09-22,1.1737,1.3465,148.1,45493.66,23527.05,9226.7,46381.54,6693.75,1.655,2.752,4.717,4.143,3740.7,66.57,112748.51,"US stock indexes, including the S&P 500, soared to fresh record highs today, driven by widespread AI optimism and robust sector deals. Following headlines like ""Huge AI Deals Keep Markets at Record Highs,"" investor sentiment remained elevated, further bolstered by Tigress Financial Partners raising Apple's price target to $305."
-2025-09-19,1.1791,1.3556,147.95,45045.81,23639.41,9216.7,46315.27,6664.36,1.641,2.751,4.717,4.139,3671.5,66.68,115688.86,"Responding to pervasive ""Fed Rate Cut Optimism,"" as widely reported today, major U.S. stock indexes soared. The S&P 500 closed at a record 6664.36 and the Dow Jones reached 46315.27, reflecting strong market confidence and pushing both to new record highs."
-2025-09-18,1.1826,1.363,146.89,45303.43,23674.53,9228.1,46142.42,6631.96,1.6,2.725,4.68,4.104,3643.7,67.44,117137.2,"U.S. equities soared to record highs, with the Dow (46142.42) and S&P 500 (6631.96) leading the charge, following a pivotal trade call between Trump and Xi that eased geopolitical tensions. Market optimism was further fueled by ""rate-cut relief"" expectations and strong performance in AI-related stocks like Dell Technologies, alongside news of ""Nvidia's Intel bet."""
-2025-09-17,1.1871,1.3654,146.41,44790.38,23359.18,9208.4,46018.32,6600.35,1.596,2.674,4.629,4.076,3681.8,67.95,116468.51,"Following signals from the Federal Reserve hinting at further rate cuts and news of Nvidia's strategic bet on Intel, as reported in today's headlines, major U.S. indices jumped. The Nasdaq led the charge, propelling the Dow and S&P 500 significantly higher."
-2025-09-16,1.1764,1.3603,147.4,44902.27,23329.24,9195.7,45757.9,6606.76,1.606,2.695,4.644,4.026,3688.9,68.47,116843.19,"Following analyses on Alphabet stock nearing all-time highs and reports of Apple's continued ascent, the S&P 500 closed strong at 6606.76. Jim Cramer's commentary on Magnificent 7 stocks further fueled investor optimism, propelling the Dow above 45700 and driving robust gains across European and Asian indices."
-2025-09-15,1.1726,1.3553,147.67,44768.12,23748.86,9277.0,45883.45,6615.28,1.594,2.694,4.635,4.034,3682.2,67.44,115444.88,"Ahead of the FOMC meeting, major stock indices surged as falling bond yields, driven by expectations of future rate cuts that could impact large firms like Berkshire Hathaway, made equities more attractive. This broad market rally was highlighted by Google's historic climb past a $3 trillion market cap for the first time."
-2025-09-12,1.1735,1.3577,147.22,44768.12,23698.15,9283.3,45834.22,6584.29,1.596,2.716,4.676,4.061,3649.4,66.99,116101.58,"The Nasdaq Composite extended its record-breaking streak for a fifth consecutive day as Wall Street posted weekly gains, with investors gearing up for next week's Federal Reserve rate decision. However, this tech-led momentum, bolstered by performance from companies like Apple and Oracle, sharply contrasted with a significant tumble in the Dow Jones Industrial Average as some investors repositioned."
-2025-09-11,1.1703,1.3535,147.33,44372.5,23703.65,9297.6,46108.0,6587.47,1.576,2.66,4.61,4.011,3636.9,66.37,115507.54,"US equity markets soared to new heights today, with the Dow surpassing 46,000 and both the S&P 500 and Nasdaq notching records, driven by CPI and jobs data that signaled an imminent Fed rate cut. Furthermore, positive outlooks on tech giants like Broadcom and Alibaba fueled investor sentiment, easily absorbing Apple's downgrade."
-2025-09-10,1.1703,1.3521,147.39,43837.67,23632.95,9225.4,45490.92,6532.04,1.565,2.657,4.633,4.032,3643.6,67.49,113955.36,"Hopes for Federal Reserve rate cuts, fueled by news of easing price pressures, significantly bolstered equity markets today, propelling the S&P 500 to a new record close of 6532.04. This broad market strength saw Oracle surge, even as Apple stock experienced a notable decline."
-2025-09-09,1.1769,1.3553,147.36,43459.29,23718.45,9242.5,45711.34,6512.61,1.561,2.66,4.625,4.074,3643.3,66.39,111530.55,"Global equity markets, including the S&P 500 and Dow, rallied sharply today. However, individual stock performance varied significantly; Apple (AAPL) declined despite the broad market's strength and an ""Outperform"" rating reiteration, while MicroStrategy's stock plunged 26% following headlines about its $71B treasury."
-2025-09-08,1.1713,1.3493,148.34,43643.81,23807.13,9221.4,45514.95,6495.15,1.571,2.646,4.609,4.046,3638.1,66.02,112071.43,"U.S. equities closed with cautious gains as the Dow (45514.95) and S&P 500 (6495.15) edged higher, with investors largely weighing the Federal Reserve's next policy moves while also bracing for potential revisions to key jobs data, a central theme across today's market headlines."
-2025-09-05,1.1657,1.3444,148.38,43018.75,23596.98,9208.2,45400.86,6481.5,1.571,2.67,4.654,4.086,3613.2,65.5,110650.98,"Following a weak US unemployment report, market sentiment turned cautious on September 5th, leading US stocks to 'fade' amidst broader economic concerns. Despite this downturn for indices like the S&P 500, select companies such as Robinhood and AppLovin saw rallies due to news of their inclusion in the S&P 500."
+SAMPLE 9/5/2024 - DELETE this row before submitting your journal!,4.0,1.318044022670357,143.324,36657.09,18576.5,8241.71,40755.75,5503.41,0.874,2.208,3.916,3.725,2546.6,72.81,56160.49,Declines in the S&P 500 and Dow owing to latest US job report that revealed significantly fewer job additions than anticipated.
+2025-09-05 00:00:00,1.1657,1.3444,148.38,43018.75,23596.98,9208.2,45400.86,6481.5,1.805,2.658,4.498,4.086,3613.2,65.5,110650.98,
+2025-09-08 00:00:00,1.1713,1.3493,148.34,43643.81,23807.13,9221.4,45514.95,6495.15,1.805,2.658,4.498,4.046,3638.1,66.02,112071.43,
+2025-09-09 00:00:00,1.1769,1.3553,147.36,43459.29,23718.45,9242.5,45711.34,6512.61,1.805,2.658,4.498,4.074,3643.3,66.39,111530.55,
+2025-09-10 00:00:00,1.1703,1.3521,147.39,43837.67,23632.95,9225.4,45490.92,6532.04,1.805,2.658,4.498,4.032,3643.6,67.49,113955.36,
+2025-09-11 00:00:00,1.1703,1.3535,147.33,44372.5,23703.65,9297.6,46108.0,6587.47,1.805,2.658,4.498,4.011,3636.9,66.37,115507.54,
+2025-09-12 00:00:00,1.1735,1.3577,147.22,44768.12,23698.15,9283.3,45834.22,6584.29,1.805,2.658,4.498,4.061,3649.4,66.99,116101.58,
+2025-09-15 00:00:00,1.1726,1.3553,147.67,44768.12,23748.86,9277.0,45883.45,6615.28,1.805,2.658,4.498,4.034,3682.2,67.44,115444.88,
+2025-09-16 00:00:00,1.1764,1.3603,147.4,44902.27,23329.24,9195.7,45757.9,6606.76,1.805,2.658,4.498,4.026,3688.9,68.47,116843.19,
+2025-09-17 00:00:00,1.1871,1.3654,146.41,44790.38,23359.18,9208.4,46018.32,6600.35,1.805,2.658,4.498,4.076,3681.8,67.95,116468.51,
+2025-09-18 00:00:00,1.1826,1.363,146.89,45303.43,23674.53,9228.1,46142.42,6631.96,1.805,2.658,4.498,4.104,3643.7,67.44,117137.2,
+2025-09-19 00:00:00,1.1791,1.3556,147.95,45045.81,23639.41,9216.7,46315.27,6664.36,1.805,2.658,4.498,4.139,3671.5,66.68,115688.86,
+2025-09-22 00:00:00,1.1737,1.3465,148.1,45493.66,23527.05,9226.7,46381.54,6693.75,1.805,2.658,4.498,4.143,3740.7,66.57,112748.51,
+2025-09-23 00:00:00,1.1801,1.3515,147.73,45493.66,23611.33,9223.3,46292.78,6656.92,1.805,2.658,4.498,4.12,3780.6,67.63,112014.5,
+2025-09-24 00:00:00,1.1814,1.3524,147.61,45630.31,23666.81,9250.4,46121.28,6637.97,1.805,2.658,4.498,4.147,3732.1,69.31,113328.63,
+2025-09-25 00:00:00,1.1745,1.3452,148.75,45754.93,23534.83,9214.0,45947.32,6604.72,1.805,2.658,4.498,4.172,3736.9,69.42,109049.29,
+2025-09-26 00:00:00,1.1663,1.3337,149.86,45354.99,23739.47,9284.8,46247.29,6643.7,1.805,2.658,4.498,4.187,3775.3,70.13,109712.83,
+2025-09-29 00:00:00,1.1708,1.3408,149.4,45043.75,23745.06,9299.8,46316.07,6661.21,1.805,2.658,4.498,4.141,3820.9,67.97,114400.38,
+2025-09-30 00:00:00,1.1731,1.3437,148.6,44932.63,23880.72,9350.4,46397.89,6688.46,1.805,2.658,4.498,4.148,3840.8,67.02,114056.09,
+2025-10-01 00:00:00,1.1736,1.3443,148.0,44550.85,24113.62,9446.4,46441.1,6711.2,1.805,2.658,4.498,4.106,3867.5,65.35,118648.93,
+2025-10-02 00:00:00,1.1734,1.348,147.08,44936.73,24422.56,9427.7,46519.72,6715.35,1.805,2.658,4.498,4.088,3839.7,64.11,120681.26,
+2025-10-03 00:00:00,1.1725,1.3447,147.15,45769.5,24378.8,9491.3,46758.28,6715.79,1.805,2.658,4.498,4.119,3880.8,64.53,122266.53,
+2025-10-06 00:00:00,1.1712,1.3434,149.61,47944.76,24378.29,9479.1,46694.97,6740.28,1.805,2.658,4.498,4.162,3948.5,65.47,124752.53,
+2025-10-07 00:00:00,1.171,1.3485,150.33,47950.88,24385.78,9483.6,46602.98,6714.59,1.805,2.658,4.498,4.127,3976.6,65.45,121451.38,
+2025-10-08 00:00:00,1.1655,1.3421,152.05,47734.99,24597.13,9548.9,46601.78,6753.72,1.805,2.658,4.498,4.129,4043.3,66.25,123354.87,
+2025-10-09 00:00:00,1.1632,1.3401,152.68,48580.44,24611.25,9509.4,46358.42,6735.11,1.805,2.658,4.498,4.148,3946.3,65.22,121705.59,
+2025-10-10 00:00:00,1.1566,1.3305,152.96,48088.8,24241.46,9427.5,45479.6,6552.51,1.805,2.658,4.498,4.051,3975.9,62.73,113214.37,
+2025-10-13 00:00:00,1.1602,1.3336,152.06,48088.8,24387.93,9442.9,46067.58,6654.72,1.805,2.658,4.498,4.051,4108.6,63.32,115271.08,
+2025-10-14 00:00:00,1.1567,1.3333,152.43,46847.32,24236.94,9452.8,46270.46,6644.31,1.805,2.658,4.498,4.022,4138.7,62.39,113118.66,
+2025-10-15 00:00:00,1.1602,1.3322,151.73,47672.67,24181.37,9424.8,46253.31,6671.06,1.805,2.658,4.498,4.046,4176.9,61.91,110783.16,
+2025-10-16 00:00:00,1.1646,1.3404,150.97,48277.74,24272.19,9436.1,45952.24,6629.07,1.805,2.658,4.498,3.976,4280.2,61.06,108186.04,
+2025-10-17 00:00:00,1.17,1.3446,150.12,47582.15,23830.99,9354.6,46190.61,6664.01,1.805,2.658,4.498,4.007,4189.9,61.29,106467.79,
+2025-10-20 00:00:00,1.1657,1.3426,150.9,49185.5,24258.8,9403.6,46706.58,6735.13,1.805,2.658,4.498,3.986,4336.4,61.01,110588.93,
+2025-10-21 00:00:00,1.1644,1.3405,150.77,49316.06,24330.03,9427.0,46924.74,6735.35,1.805,2.658,4.498,3.963,4087.7,61.32,108476.89,
+2025-10-22 00:00:00,1.16,1.3365,151.89,49307.79,24151.13,9515.0,46590.41,6699.4,1.805,2.658,4.498,3.953,4044.4,62.59,107688.59,
+2025-10-23 00:00:00,1.1608,1.3352,151.95,48641.61,24207.79,9578.6,46734.61,6738.44,1.805,2.658,4.498,3.991,4125.5,65.99,110069.73,
+2025-10-24 00:00:00,1.1618,1.3327,152.6,49299.65,24239.89,9645.6,47207.12,6791.69,1.805,2.658,4.498,3.997,4118.4,65.94,111033.92,
+2025-10-27 00:00:00,1.1632,1.3322,153.06,50512.32,24308.78,9653.8,47544.59,6875.16,1.805,2.658,4.498,3.997,4001.9,65.62,114119.33,
+2025-10-28 00:00:00,1.1652,1.3341,152.69,50219.18,24278.63,9696.7,47706.37,6890.89,1.805,2.658,4.498,3.983,3966.2,64.4,112956.16,
+2025-10-29 00:00:00,1.1658,1.3279,151.73,51307.65,24124.21,9756.1,47632.0,6890.59,1.805,2.658,4.498,4.058,3983.7,64.92,110055.3,
+2025-10-30 00:00:00,1.1603,1.3195,152.72,51325.61,24118.89,9760.1,47522.12,6822.34,1.805,2.658,4.498,4.093,4001.3,65.0,108305.55,
+2025-10-31 00:00:00,1.1572,1.3159,153.9,52411.34,23958.3,9717.3,47562.87,6840.2,1.805,2.658,4.498,4.101,3982.2,65.07,109556.16,
+2025-11-03 00:00:00,1.1528,1.3135,154.2,52411.34,24132.41,9701.4,47336.68,6851.97,1.805,2.658,4.498,4.106,4000.3,64.89,106547.52,
+2025-11-04 00:00:00,1.1519,1.3135,154.2,51497.2,23949.11,9715.0,47085.24,6771.55,1.805,2.658,4.498,4.089,3947.7,64.44,101590.52,
+2025-11-05 00:00:00,1.1486,1.3022,153.56,50212.27,24049.74,9777.1,47311.0,6796.29,1.805,2.658,4.498,4.157,3980.3,63.52,103891.84,
+2025-11-06 00:00:00,1.1497,1.3053,154.07,50883.68,23734.02,9735.8,46912.3,6720.32,1.805,2.658,4.498,4.093,3979.9,63.38,101301.29,
+2025-11-07 00:00:00,1.1549,1.3141,152.95,50276.37,23569.96,9682.6,46987.1,6728.8,1.805,2.658,4.498,4.093,3999.4,63.63,103372.41,
+2025-11-10 00:00:00,1.1544,1.3143,153.82,50911.76,23959.99,9787.2,47368.63,6832.43,1.805,2.658,4.498,4.11,4111.8,64.06,105996.59,
+2025-11-11 00:00:00,1.1557,1.3173,154.15,50842.93,24088.06,9899.6,47927.96,6846.61,1.805,2.658,4.498,4.12,4106.8,65.16,102997.47,
+2025-11-12 00:00:00,1.1587,1.3153,154.07,51063.31,24381.46,9911.4,48254.82,6850.92,1.805,2.658,4.498,4.065,4204.4,62.71,101663.19,
+2025-11-13 00:00:00,1.1592,1.3128,154.71,51281.83,24041.62,9807.7,47457.22,6737.49,1.805,2.658,4.498,4.112,4186.9,63.01,99697.49,
+2025-11-14 00:00:00,1.1632,1.3152,154.63,50376.53,23876.55,9698.4,47147.48,6734.11,1.805,2.658,4.498,4.148,4087.6,64.39,94397.79,
+2025-11-17 00:00:00,1.1615,1.316,154.59,50323.91,23590.52,9675.4,46590.24,6672.41,1.805,2.658,4.498,4.133,4068.3,64.2,92093.88,
+2025-11-18 00:00:00,1.1591,1.3156,155.27,48702.98,23180.53,9552.3,46091.74,6617.32,1.805,2.658,4.498,4.123,4061.3,64.89,92948.88,
+2025-11-19 00:00:00,1.1581,1.3148,155.55,48537.7,23162.92,9507.4,46138.77,6642.16,1.805,2.658,4.498,4.133,4077.7,63.51,91465.99,
+2025-11-20 00:00:00,1.1541,1.3062,156.99,49823.94,23278.85,9527.7,45752.26,6538.76,1.805,2.658,4.498,4.106,4056.5,63.38,86631.9,
+2025-11-21 00:00:00,1.1535,1.3085,157.37,48625.88,23091.87,9539.7,46245.41,6602.99,1.805,2.658,4.498,4.063,4076.7,62.56,85090.69,
+2025-11-22 00:00:00,1.1535,1.3085,157.37,48625.88,23091.87,9539.7,46245.41,6602.99,1.805,2.658,4.498,4.063,4076.7,62.56,84648.36,
+2025-11-23 00:00:00,1.1535,1.3085,157.37,48625.88,23091.87,9539.7,46245.41,6602.99,1.805,2.658,4.498,4.063,4076.7,62.56,86805.01,
+2025-11-24 00:00:00,1.1508,1.3096,156.69,48625.88,23239.18,9534.9,46448.27,6705.12,1.805,2.658,4.498,4.038,4091.9,63.37,88270.56,
+2025-11-25 00:00:00,1.152,1.3106,156.94,48659.52,23464.63,9609.5,47112.45,6765.88,1.805,2.658,4.498,4.002,4139.2,62.48,87341.89,
+2025-11-26 00:00:00,1.1565,1.3159,156.23,49559.07,23726.22,9691.6,47427.12,6812.61,1.805,2.658,4.498,3.998,4165.2,63.13,90518.37,
+2025-11-27 00:00:00,1.1602,1.3245,156.24,50167.1,23767.96,9693.9,47427.12,6812.61,1.805,2.658,4.498,3.998,4165.2,63.13,91285.38,
+2025-11-28 00:00:00,1.16,1.3241,156.28,50253.91,23836.79,9720.5,47716.42,6849.09,1.805,2.658,4.498,4.017,4218.3,63.2,90919.27,
+2025-11-29 00:00:00,1.16,1.3241,156.28,50253.91,23836.79,9720.5,47716.42,6849.09,1.805,2.658,4.498,4.017,4218.3,63.2,90851.76,
+2025-11-30 00:00:00,1.16,1.3241,156.28,50253.91,23836.79,9720.5,47716.42,6849.09,1.805,2.658,4.498,4.017,4218.3,63.2,90394.31,
+2025-12-01 00:00:00,1.1601,1.324,155.93,49303.28,23589.44,9702.5,47289.33,6812.63,1.805,2.658,4.498,4.096,4239.3,63.17,86321.57,
+2025-12-02 00:00:00,1.1608,1.3209,155.56,49303.45,23710.86,9701.8,47474.46,6829.37,1.805,2.658,4.498,4.086,4186.6,62.45,91350.2,
+2025-12-03 00:00:00,1.1628,1.3219,155.81,49864.68,23693.71,9692.1,47882.9,6849.72,1.805,2.658,4.498,4.057,4199.3,62.67,93527.8,
+2025-12-04 00:00:00,1.1667,1.3349,155.11,51028.42,23882.03,9710.9,47850.94,6857.12,1.805,2.658,4.498,4.108,4211.8,63.26,92141.62,
+2025-12-05 00:00:00,1.1643,1.3322,155.14,50491.87,24028.14,9667.0,47954.99,6870.4,1.805,2.658,4.498,4.139,4212.9,63.75,89387.76,
+2025-12-06 00:00:00,1.1643,1.3322,155.14,50491.87,24028.14,9667.0,47954.99,6870.4,1.805,2.658,4.498,4.139,4212.9,63.75,89272.38,
+2025-12-07 00:00:00,1.1643,1.3322,155.14,50491.87,24028.14,9667.0,47954.99,6870.4,1.805,2.658,4.498,4.139,4212.9,63.75,90405.64,
+2025-12-08 00:00:00,1.164,1.3325,155.34,50581.94,24046.01,9645.1,47739.32,6846.51,1.805,2.658,4.498,4.172,4187.2,62.49,90640.2,
+2025-12-09 00:00:00,1.1641,1.3327,155.84,50655.1,24162.65,9642.0,47560.29,6840.51,1.805,2.658,4.498,4.186,4206.7,61.94,92691.71,
+2025-12-10 00:00:00,1.1628,1.3304,156.84,50602.8,24130.14,9655.5,48057.75,6886.68,1.805,2.658,4.498,4.164,4196.4,62.21,92020.95,
+2025-12-11 00:00:00,1.1701,1.3388,155.79,50148.82,24294.61,9703.2,48704.01,6901.0,1.805,2.658,4.498,4.141,4285.5,61.28,92511.34,
+2025-12-12 00:00:00,1.1739,1.339,155.57,50836.55,24186.49,9649.0,48458.05,6827.41,1.805,2.658,4.498,4.194,4300.1,61.12,90270.41,
+2025-12-13 00:00:00,1.1739,1.339,155.57,50836.55,24186.49,9649.0,48458.05,6827.41,1.805,2.658,4.498,4.194,4300.1,61.12,90298.71,
+2025-12-14 00:00:00,1.1739,1.339,155.57,50836.55,24186.49,9649.0,48458.05,6827.41,1.805,2.658,4.498,4.194,4300.1,61.12,88175.18,
+2025-12-15 00:00:00,1.1738,1.3368,155.89,50168.11,24229.91,9751.3,48416.56,6816.51,1.805,2.658,4.498,4.182,4306.7,60.56,86419.78,
+2025-12-16 00:00:00,1.1755,1.3381,155.01,49383.29,24076.87,9684.8,48114.26,6800.26,1.805,2.658,4.498,4.149,4304.5,58.92,87843.98,
+2025-12-17 00:00:00,1.175,1.3425,154.78,49512.28,23960.59,9774.3,47885.97,6721.43,1.805,2.658,4.498,4.151,4347.5,59.68,86143.76,
+2025-12-18 00:00:00,1.1742,1.3375,155.49,49001.5,24199.5,9837.8,47951.85,6774.76,1.805,2.658,4.498,4.116,4339.5,59.82,85462.51,
+2025-12-19 00:00:00,1.1726,1.3385,155.59,49507.21,24288.4,9897.4,48134.89,6834.5,1.805,2.658,4.498,4.151,4361.4,60.47,88103.38,
+2025-12-20 00:00:00,1.1726,1.3385,155.59,49507.21,24288.4,9897.4,48134.89,6834.5,1.805,2.658,4.498,4.151,4361.4,60.47,88344.0,
+2025-12-21 00:00:00,1.1726,1.3385,155.59,49507.21,24288.4,9897.4,48134.89,6834.5,1.805,2.658,4.498,4.151,4361.4,60.47,88621.75,
+2025-12-22 00:00:00,1.1738,1.3437,157.38,50402.39,24286.75,9859.31,48134.89,6834.5,1.805,2.658,4.498,4.151,4443.5,61.45,89754.26,
+2025-12-23 00:00:00,,,,,,,,,,,,,,,,
+2025-12-24 00:00:00,,,,,,,,,,,,,,,,
+2025-12-25 00:00:00,,,,,,,,,,,,,,,,
+2025-12-26 00:00:00,,,,,,,,,,,,,,,,
+2025-12-27 00:00:00,,,,,,,,,,,,,,,,
+2025-12-28 00:00:00,,,,,,,,,,,,,,,,
+2025-12-29 00:00:00,,,,,,,,,,,,,,,,
+2025-12-30 00:00:00,,,,,,,,,,,,,,,,
+2025-12-31 00:00:00,,,,,,,,,,,,,,,,
+2026-01-01 00:00:00,,,,,,,,,,,,,,,,
+2026-01-02 00:00:00,,,,,,,,,,,,,,,,
+2026-01-03 00:00:00,,,,,,,,,,,,,,,,
+2026-01-04 00:00:00,,,,,,,,,,,,,,,,
+2026-01-05 00:00:00,,,,,,,,,,,,,,,,
+2026-01-06 00:00:00,,,,,,,,,,,,,,,,
+2026-01-07 00:00:00,,,,,,,,,,,,,,,,
+2026-01-08 00:00:00,,,,,,,,,,,,,,,,
+2026-01-09 00:00:00,,,,,,,,,,,,,,,,
+2026-01-10 00:00:00,,,,,,,,,,,,,,,,
+2026-01-11 00:00:00,,,,,,,,,,,,,,,,
+2026-01-12 00:00:00,,,,,,,,,,,,,,,,
+2026-01-13 00:00:00,,,,,,,,,,,,,,,,
+2026-01-14 00:00:00,,,,,,,,,,,,,,,,
+2026-01-15 00:00:00,,,,,,,,,,,,,,,,
+2026-01-16 00:00:00,,,,,,,,,,,,,,,,
+2026-01-17 00:00:00,,,,,,,,,,,,,,,,
+2026-01-18 00:00:00,,,,,,,,,,,,,,,,
+2026-01-19 00:00:00,,,,,,,,,,,,,,,,
+2026-01-20 00:00:00,,,,,,,,,,,,,,,,
+2026-01-21 00:00:00,,,,,,,,,,,,,,,,
+2026-01-22 00:00:00,,,,,,,,,,,,,,,,
+2026-01-23 00:00:00,,,,,,,,,,,,,,,,
+2026-01-24 00:00:00,,,,,,,,,,,,,,,,
+2026-01-25 00:00:00,,,,,,,,,,,,,,,,
+2026-01-26 00:00:00,,,,,,,,,,,,,,,,
+2026-01-27 00:00:00,,,,,,,,,,,,,,,,
+2026-01-28 00:00:00,,,,,,,,,,,,,,,,
+2026-01-29 00:00:00,,,,,,,,,,,,,,,,
+2026-01-30 00:00:00,,,,,,,,,,,,,,,,
+2026-01-31 00:00:00,,,,,,,,,,,,,,,,
+2026-02-01 00:00:00,,,,,,,,,,,,,,,,
+2026-02-02 00:00:00,,,,,,,,,,,,,,,,
+2026-02-03 00:00:00,,,,,,,,,,,,,,,,
+2026-02-04 00:00:00,,,,,,,,,,,,,,,,
+2026-02-05 00:00:00,,,,,,,,,,,,,,,,
+2026-02-06 00:00:00,,,,,,,,,,,,,,,,
+2026-02-07 00:00:00,,,,,,,,,,,,,,,,
+2026-02-08 00:00:00,,,,,,,,,,,,,,,,
+2026-02-09 00:00:00,,,,,,,,,,,,,,,,
+2026-02-10 00:00:00,,,,,,,,,,,,,,,,
+2026-02-11 00:00:00,,,,,,,,,,,,,,,,
+2026-02-12 00:00:00,,,,,,,,,,,,,,,,
+2026-02-13 00:00:00,,,,,,,,,,,,,,,,
+2026-02-14 00:00:00,,,,,,,,,,,,,,,,
+2026-02-15 00:00:00,,,,,,,,,,,,,,,,
+2026-02-16 00:00:00,,,,,,,,,,,,,,,,
+2026-02-17 00:00:00,,,,,,,,,,,,,,,,
+2026-02-18 00:00:00,,,,,,,,,,,,,,,,
+2026-02-19 00:00:00,,,,,,,,,,,,,,,,
+2026-02-20 00:00:00,,,,,,,,,,,,,,,,
+2026-02-21 00:00:00,,,,,,,,,,,,,,,,
+2026-02-22 00:00:00,,,,,,,,,,,,,,,,
+2026-02-23 00:00:00,,,,,,,,,,,,,,,,
+2026-02-24 00:00:00,,,,,,,,,,,,,,,,
+2026-02-25 00:00:00,,,,,,,,,,,,,,,,
+2026-02-26 00:00:00,,,,,,,,,,,,,,,,
+2026-02-27 00:00:00,,,,,,,,,,,,,,,,
+2026-02-28 00:00:00,,,,,,,,,,,,,,,,
+2026-03-01 00:00:00,,,,,,,,,,,,,,,,
+2026-03-02 00:00:00,,,,,,,,,,,,,,,,
+2026-03-03 00:00:00,,,,,,,,,,,,,,,,
+2026-03-04 00:00:00,,,,,,,,,,,,,,,,
+2026-03-05 00:00:00,,,,,,,,,,,,,,,,
+2026-03-06 00:00:00,,,,,,,,,,,,,,,,
+2026-03-07 00:00:00,,,,,,,,,,,,,,,,
+2026-03-08 00:00:00,,,,,,,,,,,,,,,,
+2026-03-09 00:00:00,,,,,,,,,,,,,,,,
+2026-03-10 00:00:00,,,,,,,,,,,,,,,,
+2026-03-11 00:00:00,,,,,,,,,,,,,,,,
+2026-03-12 00:00:00,,,,,,,,,,,,,,,,
+2026-03-13 00:00:00,,,,,,,,,,,,,,,,

@@ -1,134 +1,99 @@
-"""
-update_market_journal.py
-Fetches latest market and economic data and safely updates market_journal.csv
-"""
-
 import csv
-import os
-from datetime import datetime, timedelta
 import requests
+from datetime import datetime, timedelta
 from config import API_KEYS
 
-# ===== SETTINGS =====
 CSV_FILE = "market_journal.csv"
 DATE_FORMAT = "%Y-%m-%d"
-YEARS_TO_KEEP = 5
 
-# Symbols to fetch
-STOCKS = ["QQQ", "VIX"]
-FRED_SERIES = {
-    "10Y Yield": "DGS10",
-    "Fed Funds Rate": "FEDFUNDS"
-}
-
-# ===== FUNCTIONS =====
-
-def fetch_alpha_vantage(symbol):
+# ---------------- Helpers ----------------
+def get_alpha_vantage(symbol):
     url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={API_KEYS['alpha_vantage']}&outputsize=compact"
+    r = requests.get(url)
     try:
-        r = requests.get(url)
         data = r.json()
-        return data.get("Time Series (Daily)", {})
+        if "Time Series (Daily)" not in data:
+            print(f"⚠️ No data returned for {symbol}, skipping")
+            return {}
+        return data["Time Series (Daily)"]
     except Exception as e:
-        print(f"⚠️ Alpha Vantage error for {symbol}: {e}")
+        print(f"⚠️ Error fetching {symbol}: {e}")
         return {}
 
-def fetch_fred(series_id):
+def get_fred_series(series_id):
     url = f"https://api.stlouisfed.org/fred/series/observations?series_id={series_id}&api_key={API_KEYS['fred']}&file_type=json"
+    r = requests.get(url)
     try:
-        r = requests.get(url)
         data = r.json()
-        return {obs["date"]: obs["value"] for obs in data.get("observations", []) if obs["value"] != "."}
+        if "observations" not in data:
+            print(f"⚠️ No data returned for {series_id}, skipping")
+            return {}
+        return {obs["date"]: obs["value"] for obs in data["observations"] if obs["value"] != "."}
     except Exception as e:
-        print(f"⚠️ FRED error for {series_id}: {e}")
+        print(f"⚠️ Error fetching {series_id}: {e}")
         return {}
 
-# ===== LOAD EXISTING CSV =====
+# ---------------- Load Existing CSV ----------------
 existing_data = []
-if os.path.exists(CSV_FILE):
+try:
     with open(CSV_FILE, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            existing_data.append(row)
+            if row.get("Date"):  # skip empty date rows
+                existing_data.append(row)
+except FileNotFoundError:
+    print(f"📄 {CSV_FILE} not found, creating a new one.")
 
-# Keep track of existing dates to avoid duplicates
-existing_dates = set()
-for row in existing_data:
-    date_val = row.get("Date", "").strip()
-    if date_val:
-        existing_dates.add(date_val)
+# ---------------- Determine last date ----------------
+existing_dates = {row["Date"] for row in existing_data if "Date" in row}
+today = datetime.today().date()
+last_date = max([datetime.strptime(d, DATE_FORMAT).date() for d in existing_dates], default=today - timedelta(days=2))
 
-# ===== FETCH NEW DATA =====
-print("📈 Fetching market data...")
+# ---------------- Fetch Recent Data ----------------
+symbols = ["QQQ", "VIX"]
+fred_series = {"10Y Yield": "DGS10"}
 
-stock_data = {}
-for symbol in STOCKS:
-    stock_data[symbol] = fetch_alpha_vantage(symbol)
-
-fred_data = {}
-for name, series_id in FRED_SERIES.items():
-    fred_data[name] = fetch_fred(series_id)
-
-# ===== COMBINE DATA =====
-combined_dates = set(existing_dates)
-for symbol, data in stock_data.items():
-    combined_dates.update(data.keys())
-for series in fred_data.values():
-    combined_dates.update(series.keys())
-
-combined = []
-
-for date in sorted(combined_dates):
-    row = {"Date": date}
-    # Add existing row data first (preserve original columns)
-    existing_row = next((r for r in existing_data if r.get("Date", "").strip() == date), {})
-    row.update(existing_row)
-
-    # Update stock prices if available
-    for symbol in STOCKS:
-        if date in stock_data.get(symbol, {}):
-            try:
-                row[symbol] = round(float(stock_data[symbol][date]["4. close"]), 2)
-            except Exception:
-                pass  # keep existing if API failed
-
-    # Update FRED data if available
-    for name in FRED_SERIES.keys():
-        if date in fred_data.get(name, {}):
-            try:
-                row[name] = round(float(fred_data[name][date]), 2)
-            except Exception:
-                pass
-
-    combined.append(row)
-
-# ===== FILTER BY DATE (last N YEARS) =====
-cutoff_date = datetime.now().date() - timedelta(days=YEARS_TO_KEEP*365)
-filtered_data = []
-for row in combined:
-    date_str = row.get("Date", "").strip()
-    if not date_str:
+new_rows = []
+for i in range(1, 3):  # last 2 days
+    date = today - timedelta(days=i)
+    date_str = date.strftime(DATE_FORMAT)
+    if date_str in existing_dates:
         continue
-    try:
-        row_date = datetime.strptime(date_str, DATE_FORMAT).date()
-        if row_date >= cutoff_date:
-            filtered_data.append(row)
-    except ValueError:
-        continue  # skip invalid dates
 
-# ===== WRITE BACK CSV =====
-# Use all columns seen in any row
-all_columns = set()
-for row in filtered_data:
-    all_columns.update(row.keys())
-all_columns = sorted(all_columns)
+    row = {"Date": date_str}
 
+    # Alpha Vantage symbols
+    for sym in symbols:
+        data = get_alpha_vantage(sym)
+        if date_str in data:
+            row[sym] = round(float(data[date_str]["4. close"]), 2)
+        else:
+            row[sym] = ""
+
+    # FRED series
+    for col, series_id in fred_series.items():
+        data = get_fred_series(series_id)
+        row[col] = float(data.get(date_str, "")) if data.get(date_str) else ""
+
+    new_rows.append(row)
+
+# ---------------- Merge Data ----------------
+existing_data.extend(new_rows)
+existing_data.sort(key=lambda x: x.get("Date", ""))  # ensure chronological order
+
+# ---------------- Determine Fieldnames ----------------
+all_fieldnames = set()
+for row in existing_data:
+    all_fieldnames.update(row.keys())
+fieldnames = list(all_fieldnames)
+
+# ---------------- Write Back CSV ----------------
 with open(CSV_FILE, "w", newline="", encoding="utf-8") as f:
-    writer = csv.DictWriter(f, fieldnames=all_columns)
+    writer = csv.DictWriter(f, fieldnames=fieldnames)
     writer.writeheader()
-    for row in filtered_data:
-        # Fill missing columns with empty strings
-        safe_row = {col: row.get(col, "") for col in all_columns}
-        writer.writerow(safe_row)
+    writer.writerows(existing_data)
 
-print(f"✅ Market journal updated successfully. Kept last {YEARS_TO_KEEP} years.")
+if existing_data:
+    print(f"✅ CSV updated! Last date: {existing_data[-1].get('Date', 'Unknown')}")
+else:
+    print("⚠️ No data to write.")

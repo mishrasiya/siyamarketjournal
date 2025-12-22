@@ -35,10 +35,9 @@ except ImportError:
 shutdown_requested = False
 
 def signal_handler(signum, frame):
-    """Handle interrupt signals gracefully"""
-    global shutdown_requested
-    shutdown_requested = True
-    print("\n\n⚠️  Shutdown requested. Finishing current operation and exiting...")
+    """Ignore interrupt signals - continue running"""
+    # Silently ignore interrupts to prevent automatic cancellation
+    pass
 
 # Import API keys from config
 try:
@@ -500,91 +499,6 @@ class MarketDataFetcher:
         yf_symbol = f"{symbol}-USD"
         return self.get_yfinance_data(yf_symbol, date)
 
-    def get_financial_headlines(self, date):
-        """Fetch financial news headlines for a specific date using NewsAPI or EODHD"""
-        date_str = date.strftime('%Y-%m-%d')
-        financial_keywords = [
-            'market', 'stock', 'economy', 'economic', 'inflation', 
-            'fed', 'central bank', 'earnings', 'trading', 'investment',
-            'dollar', 'currency', 'bond', 'yield', 'oil', 'gold',
-            'bitcoin', 'crypto', 'gdp', 'unemployment', 'rate', 'policy',
-            'finance', 'financial', 'bank', 'monetary', 'fiscal', 's&p',
-            'dow', 'nasdaq', 'forex', 'commodity', 'equity', 'index'
-        ]
-        
-        # NewsAPI free tier only goes back to 2025-10-22, so try it first for recent dates
-        newsapi_min_date = datetime(2025, 10, 22).date()
-        
-        # Try NewsAPI first if date is within range
-        if date.date() >= newsapi_min_date and self.api_keys.get('newsapi') and self.api_keys.get('newsapi') != 'YOUR_NEWSAPI_KEY':
-            try:
-                url = 'https://newsapi.org/v2/everything'
-                params = {
-                    'apiKey': self.api_keys['newsapi'],
-                    'q': 'stock market OR economy OR inflation OR Fed OR central bank OR earnings OR trading',
-                    'from': date_str,
-                    'to': date_str,
-                    'language': 'en',
-                    'sortBy': 'relevancy',
-                    'pageSize': 10
-                }
-                
-                response = requests.get(url, params=params, timeout=10)
-                
-                if response.status_code == 200:
-                    data = response.json()
-                    articles = data.get('articles', [])
-                    headlines = []
-                    for article in articles:
-                        title = article.get('title', '').strip()
-                        if title and len(title) > 15:
-                            title_lower = title.lower()
-                            if any(keyword in title_lower for keyword in financial_keywords):
-                                headlines.append(title)
-                                if len(headlines) >= 5:
-                                    return headlines
-                    if headlines:
-                        return headlines
-            except Exception:
-                pass  # Fall through to EODHD
-        
-        # Try EODHD as fallback
-        if self.api_keys.get('eodhd') and self.api_keys.get('eodhd') != 'YOUR_EODHD_API_KEY':
-            try:
-                url = 'https://eodhd.com/api/news'
-                params = {
-                    'api_token': self.api_keys['eodhd'],
-                    's': 'AAPL.US',
-                    'from': date_str,
-                    'to': date_str,
-                    'limit': 20
-                }
-                
-                response = requests.get(url, params=params, timeout=10)
-                
-                if response.status_code == 200:
-                    data = response.json()
-                    if data and isinstance(data, list):
-                        headlines = []
-                        for article in data:
-                            title = article.get('title', '').strip()
-                            article_date = article.get('date', '')
-                            if article_date and date_str in article_date:
-                                if title and len(title) > 15:
-                                    title_lower = title.lower()
-                                    if any(keyword in title_lower for keyword in financial_keywords):
-                                        headlines.append(title)
-                                        if len(headlines) >= 5:
-                                            return headlines
-                        if headlines:
-                            return headlines
-                elif response.status_code == 402:
-                    pass  # Rate limited, return empty
-            except Exception:
-                pass
-        
-        return []  # No headlines found
-
     def generate_daily_news(self, date, market_data, formatted_data):
         """Generate a short daily news item based on market data using Gemini API"""
         if not GEMINI_AVAILABLE:
@@ -649,35 +563,8 @@ class MarketDataFetcher:
             
             market_summary = "\n".join(market_summary_parts)
             
-            # Fetch actual news headlines for this date
-            print(f"  → Fetching news headlines...")
-            headlines = self.get_financial_headlines(date)
-            if headlines:
-                print(f"   ✓ Found {len(headlines)} headlines")
-            else:
-                print(f"   ⚠️  No headlines found, using market data only")
-            
-            # Build the prompt with headlines if available
-            if headlines:
-                headlines_text = "\n".join([f"- {h}" for h in headlines])
-                prompt = f"""You are a financial news analyst. Based on the actual news headlines and market data below for {date.strftime('%B %d, %Y')}, write a brief, professional news item (1-2 sentences, maximum 100 words) explaining how the news affected the markets that day.
-
-Actual News Headlines from {date.strftime('%B %d, %Y')}:
-{headlines_text}
-
-Market Data:
-{market_summary}
-
-Write a concise news item that connects the actual news headlines to the market movements. Reference specific headlines and explain how they influenced the markets. IMPORTANT: Vary your sentence structure and openings - do NOT start multiple entries with the same phrase. Use diverse openings:
-- Start with specific markets: "The S&P 500...", "European indices..."
-- Start with news events: "Following [headline]...", "News of [event]..."
-- Start with economic factors: "Inflation concerns...", "Central bank signals..."
-- Use different structures: questions, statements, cause-effect patterns
-
-Mix short and medium-length sentences. Be specific about which markets moved and connect them to the actual news. Keep it brief and punchy."""
-            else:
-                # Fallback if no headlines available
-                prompt = f"""You are a financial news analyst. Based on the market data below for {date.strftime('%B %d, %Y')}, write a brief, professional news item (1-2 sentences, maximum 100 words) explaining what likely affected the markets that day.
+            # Create prompt for Gemini
+            prompt = f"""You are a financial news analyst. Based on the market data below for {date.strftime('%B %d, %Y')}, write a brief, professional news item (1-2 sentences, maximum 100 words) explaining what likely affected the markets that day.
 
 Market Data:
 {market_summary}
@@ -789,9 +676,10 @@ def process_spreadsheet(input_filename, output_filename=None):
     """Main function to process the spreadsheet"""
     global shutdown_requested
     
-    # Set up signal handlers for graceful shutdown
-    signal.signal(signal.SIGINT, signal_handler)   # Handle Ctrl+C
-    signal.signal(signal.SIGTERM, signal_handler)  # Handle termination requests
+    # Ignore interrupt signals completely to prevent automatic cancellation
+    signal.signal(signal.SIGINT, signal.SIG_IGN)  # Ignore Ctrl+C
+    # Keep SIGTERM handler for actual termination requests
+    signal.signal(signal.SIGTERM, signal_handler)
     
     print("=" * 70)
     print("🚀 MARKET DATA AUTO-POPULATOR")
@@ -837,11 +725,6 @@ def process_spreadsheet(input_filename, output_filename=None):
     current_date_num = 0
     
     for idx, row in df.iterrows():
-        # Check for shutdown request
-        if shutdown_requested:
-            print("\n⚠️  Shutdown requested. Saving progress and exiting...")
-            break
-        
         date_value = row[date_col]
         
         # Skip if date is empty, sample row, or invalid
@@ -864,15 +747,11 @@ def process_spreadsheet(input_filename, output_filename=None):
             date_start_time = time.time()
             print(f"\n[{current_date_num}/{total_dates}] Processing {target_date.strftime('%Y-%m-%d')}...")
             
-            # Fetch market data
+            # Fetch market data (ignore interrupts)
             try:
                 market_data = fetch_market_data(target_date, fetcher)
             except (KeyboardInterrupt, SystemExit):
-                # Check if shutdown was requested
-                if shutdown_requested:
-                    print("\n⚠️  Shutdown requested. Saving progress and exiting...")
-                    break
-                # Otherwise, retry once
+                # Silently ignore and continue
                 print("   ⚠️  Network interruption, retrying...")
                 time.sleep(1)  # Brief pause before retry
                 try:
@@ -884,29 +763,15 @@ def process_spreadsheet(input_filename, output_filename=None):
                 print(f"   ⚠️  Error fetching data: {e}")
                 continue
             
-            # Check again after fetching data
-            if shutdown_requested:
-                print("\n⚠️  Shutdown requested. Saving progress and exiting...")
-                break
-            
             formatted_data = format_market_data(market_data)
             
             # Generate daily news item
-            if shutdown_requested:
-                print("\n⚠️  Shutdown requested. Saving progress and exiting...")
-                break
-            
             print("  → Generating news item...")
             news_item = fetcher.generate_daily_news(target_date, market_data, formatted_data)
             if news_item:
                 print(f"   ✓ News item generated ({len(news_item)} chars)")
             else:
                 print("   ⚠️  News item generation skipped")
-            
-            # Check again before updating dataframe
-            if shutdown_requested:
-                print("\n⚠️  Shutdown requested. Saving progress and exiting...")
-                break
             
             # Update the dataframe
             for col in df.columns:
@@ -952,11 +817,7 @@ def process_spreadsheet(input_filename, output_filename=None):
             print(f"   ✓ Updated row {idx + 1} | Time: {date_total_time:.1f}s")
             
         except (KeyboardInterrupt, SystemExit):
-            # Check if shutdown was requested
-            if shutdown_requested:
-                print("\n⚠️  Shutdown requested. Saving progress and exiting...")
-                break
-            # Otherwise, continue to next row
+            # Silently ignore and continue to next row
             print("   ⚠️  Interrupted, continuing with next date...")
             continue
         except Exception as e:
@@ -988,9 +849,9 @@ def process_spreadsheet(input_filename, output_filename=None):
 
 if __name__ == "__main__":
     input_file = "Market Journal Fall 2025 Template.xlsx"
-    output_file = "Market Journal Fall 2025.xlsx"
+    output_file = "Updated_Market_Journal_Fall_2025.xlsx"
     
     print("\n📋 Input:  Market Journal Fall 2025 Template.xlsx")
-    print("💾 Output: Market Journal Fall 2025.xlsx\n")
+    print("💾 Output: Updated_Market_Journal_Fall_2025.xlsx\n")
     
     process_spreadsheet(input_file, output_file)
