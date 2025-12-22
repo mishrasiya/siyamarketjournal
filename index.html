@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatic Market Journal for FMKT 256</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market Journal</title>
+
     <style>
         * {
             margin: 0;
@@ -13,7 +14,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0a1f44; /* Dark navy background */
+            background: #0a1f44;
             color: #f0f0f0;
             min-height: 100vh;
             padding: 40px 20px;
@@ -22,15 +23,14 @@
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            background: #142b5c; /* Slightly lighter navy */
+            background: #142b5c;
             border-radius: 16px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
             overflow: hidden;
         }
 
         .header {
             background: #0f2550;
-            color: #f0f0f0;
             padding: 40px;
             text-align: center;
         }
@@ -39,11 +39,11 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 10px;
-            color: #ffd966; /* soft accent color */
+            color: #ffd966;
         }
 
         .header p {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             opacity: 0.9;
             max-width: 700px;
             margin: 0 auto;
@@ -75,6 +75,7 @@
         th, td {
             padding: 14px 12px;
             text-align: left;
+            white-space: nowrap;
         }
 
         th {
@@ -83,6 +84,7 @@
             border-bottom: 2px solid #2e4a86;
             position: sticky;
             top: 0;
+            z-index: 2;
         }
 
         td {
@@ -110,10 +112,6 @@
                 font-size: 2rem;
             }
 
-            .header p {
-                font-size: 1rem;
-            }
-
             .content {
                 padding: 20px;
             }
@@ -128,15 +126,20 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
             <h1>Market Journal</h1>
-            <p>Personal market journal to stay up to date with the market. Created by Siya Mishra</p>
+            <p>
+                Personal market journal to track daily market data.<br />
+                Created by Siya Mishra
+            </p>
         </div>
+
         <div class="content">
             <div class="table-container">
-                <table id="dataTable">
+                <table>
                     <thead id="tableHead"></thead>
                     <tbody id="tableBody"></tbody>
                 </table>
@@ -145,7 +148,6 @@
     </div>
 
     <script>
-        // Load and parse CSV
         fetch('/market_journal.csv')
             .then(response => response.text())
             .then(csv => {
@@ -157,8 +159,7 @@
                     let current = '';
                     let inQuotes = false;
 
-                    for (let i = 0; i < line.length; i++) {
-                        const char = line[i];
+                    for (let char of line) {
                         if (char === '"') {
                             inQuotes = !inQuotes;
                         } else if (char === ',' && !inQuotes) {
@@ -173,29 +174,44 @@
                 };
 
                 const headers = parseCSVLine(lines[0]);
+
+                // ❌ Remove news / summary column
+                const filteredHeaders = headers.filter(h =>
+                    !h.toUpperCase().includes('NEWS') &&
+                    !h.toUpperCase().includes('SUMMARY')
+                );
+
                 const thead = document.getElementById('tableHead');
                 const tbody = document.getElementById('tableBody');
 
+                // Render header
                 const headerRow = document.createElement('tr');
-                headers.forEach(header => {
+                filteredHeaders.forEach(header => {
                     const th = document.createElement('th');
                     th.textContent = header;
-                    if (header.toUpperCase().includes('DATE')) th.classList.add('date-col');
+                    if (header.toUpperCase().includes('DATE')) {
+                        th.classList.add('date-col');
+                    }
                     headerRow.appendChild(th);
                 });
                 thead.appendChild(headerRow);
 
+                // Render rows
                 for (let i = 1; i < lines.length; i++) {
                     const row = document.createElement('tr');
                     const values = parseCSVLine(lines[i]);
 
-                    headers.forEach((header, index) => {
-                        const td = document.createElement('td');
+                    filteredHeaders.forEach(header => {
+                        const index = headers.indexOf(header);
                         const value = values[index] || '';
+                        const td = document.createElement('td');
                         td.textContent = value;
 
-                        if (header.toUpperCase().includes('DATE')) td.classList.add('date-col');
-                        else if (!isNaN(value) && value !== '') td.classList.add('number-col');
+                        if (header.toUpperCase().includes('DATE')) {
+                            td.classList.add('date-col');
+                        } else if (!isNaN(value) && value !== '') {
+                            td.classList.add('number-col');
+                        }
 
                         row.appendChild(td);
                     });
@@ -203,10 +219,14 @@
                     tbody.appendChild(row);
                 }
             })
-            .catch(error => {
-                console.error('Error loading CSV:', error);
+            .catch(err => {
+                console.error(err);
                 document.getElementById('tableBody').innerHTML =
-                    '<tr><td colspan="100%" style="text-align:center; padding:40px; color:#ff6b6b;">Error loading data. Please check if market_journal.csv exists.</td></tr>';
+                    `<tr>
+                        <td colspan="100%" style="text-align:center; padding:40px; color:#ff6b6b;">
+                            Error loading market_journal.csv
+                        </td>
+                    </tr>`;
             });
     </script>
 </body>
